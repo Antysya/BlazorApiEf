@@ -1,6 +1,8 @@
 ﻿@page "/products"
-@using Models;
-@inject ShopClient.ShopClient ShopClient
+@using GeneratedApiClientLib
+@using GeneratedApiClientLib.Models;
+@inject BlazorGeneratedApiClient ShopClient
+
 <h3>Список товаров</h3>
 @if (_products != null)
 {
@@ -20,7 +22,7 @@ else
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
-        _products = await ShopClient.GetProductsAsync();
+        _products = await ShopClient.Api.Products.GetAsync();
     }
 
 }

@@ -10,6 +10,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopClient", "ShopClient\ShopClient.csproj", "{5888BD9A-4462-4989-90BD-9171CA63FDA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratedApiClientLib", "GeneratedApiClientLib\GeneratedApiClientLib.csproj", "{FE3BC536-D03A-4F37-A4C1-314FB1CF8F6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{5888BD9A-4462-4989-90BD-9171CA63FDA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5888BD9A-4462-4989-90BD-9171CA63FDA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5888BD9A-4462-4989-90BD-9171CA63FDA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE3BC536-D03A-4F37-A4C1-314FB1CF8F6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE3BC536-D03A-4F37-A4C1-314FB1CF8F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE3BC536-D03A-4F37-A4C1-314FB1CF8F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE3BC536-D03A-4F37-A4C1-314FB1CF8F6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

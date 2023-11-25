@@ -18,8 +18,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\GeneratedApiClientLib\GeneratedApiClientLib.csproj" />
 	  <ProjectReference Include="..\Models\Models.csproj" />
-	  <ProjectReference Include="..\ShopClient\ShopClient.csproj" />
 	</ItemGroup>
 	
 	

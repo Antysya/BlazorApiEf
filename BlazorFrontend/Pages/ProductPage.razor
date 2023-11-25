@@ -1,4 +1,4 @@
-﻿@using Models;
+﻿@using GeneratedApiClientLib.Models;
 @page "/Product/{ProductId:int}"
 @inject IProductCatalog ProductCatalog
 
@@ -30,9 +30,9 @@
     public int ProductId { get; set; }
     private Product _product { get; set; }
 
-    protected override async Task OnInitializedAsync()
-    {
-        await base.OnInitializedAsync();
-        _product = await ProductCatalog.GetProductAsync(ProductId);
-    }
+    //protected override async Task OnInitializedAsync()
+    //{
+    //    await base.OnInitializedAsync();
+    //    _product = await ProductCatalog.GetProductAsync(ProductId);
+    //}
 }
