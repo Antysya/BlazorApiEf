@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using Microsoft.EntityFrameworkCore;
 using Models;
 using Microsoft.AspNetCore.Mvc;
+using Domain.RepositoryInterfaces;
 
 namespace ServerDb.Extension
 {
@@ -10,14 +11,14 @@ namespace ServerDb.Extension
     {
         public static IEndpointRouteBuilder MapProductEndpoints(this IEndpointRouteBuilder app)
         {
-            app.MapGet("/api/products", (AppDbContext dbContext) =>
+            app.MapGet("/api/products", (AppDbContext dbContext, CancellationToken cancellationToken) =>
             {
-                return dbContext.Product.ToListAsync();
+                return dbContext.Product.ToListAsync(cancellationToken);
             });
-            app.MapPost("/api/products/add",async ([FromServices]AppDbContext dbContext, [FromBody]Product product) =>
+            app.MapPost("/api/products/add",async (
+                [FromServices] IProductRepository productRepository, [FromBody]Product product, CancellationToken cancellationToken) =>
             {
-                await dbContext.Product.AddAsync(product);
-                await dbContext.SaveChangesAsync();
+                await productRepository.Add(product, cancellationToken);
             });
             return app;
         }

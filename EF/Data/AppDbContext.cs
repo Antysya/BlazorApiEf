@@ -7,6 +7,7 @@ namespace ServerDb.Data
     {
         //Список таблиц:
         public DbSet<Product> Product => Set<Product>();
+        public DbSet<Account> Accounts => Set<Account>();
 
         public AppDbContext(
             DbContextOptions<AppDbContext> options)

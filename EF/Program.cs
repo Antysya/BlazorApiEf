@@ -1,9 +1,9 @@
 using ServerDb.Data;
-using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using ServerDb.Extension;
-using Models;
-
+using ServerDb.Data.Repositories;
+using Domain.RepositoryInterfaces;
+using Domain.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,8 +18,13 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("AppDb"));
 });
+
+builder.Services.AddScoped<IProductRepository, ProductRepositoryEF>();
+builder.Services.AddScoped<IAccountRepository, AccountRepositoryEF>();
+builder.Services.AddScoped<AccountService>();
+
 builder.Services.AddCors();
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

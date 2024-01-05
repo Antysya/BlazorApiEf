@@ -21,10 +21,10 @@ namespace ShopClient
             _host = host;
         }
 
-        public async Task<IReadOnlyList<Product>>GetProductsAsync()
+        public async Task<IReadOnlyList<Product>>GetProductsAsync(CancellationToken cancellationToken)
         {
             var uri = $"{_host}/api/products";
-            var products = await _httpClient.GetFromJsonAsync<IReadOnlyList<Product>>(uri);
+            var products = await _httpClient.GetFromJsonAsync<IReadOnlyList<Product>>(uri, cancellationToken:cancellationToken);
             return products!;
         }
     }
