@@ -1,4 +1,5 @@
-﻿using Domain.RepositoryInterfaces;
+﻿using Domain.Exceptions;
+using Domain.RepositoryInterfaces;
 using Domain.Services;
 using Microsoft.AspNetCore.Mvc;
 using Models;
@@ -16,6 +17,8 @@ namespace ServerDb.Controllers
         {
             _accountService = accountService ?? throw new ArgumentNullException(nameof(accountService));
         }
+
+        [HttpPost ("register")]
         public async Task<ActionResult<Account>> Register(
             [Required]string name, 
             [EmailAddress]string email, 
@@ -27,9 +30,9 @@ namespace ServerDb.Controllers
                 var newAccount = await _accountService.Register(name, email, password, cancellationToken);
                 return newAccount;
             }
-            catch (InvalidOperationException)
+            catch (EmailAlreadyExistsException)
             {
-                return BadRequest("Account with provided email already exists");
+                return BadRequest("Учетная запись с указанным адресом электронной почты уже существует");
             }
             
         }

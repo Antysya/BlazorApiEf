@@ -1,5 +1,5 @@
 ﻿using Models;
-namespace BlazorWASM.Model
+namespace FrontendBlazor.Model
 {
     public interface IProductCatalog
     {

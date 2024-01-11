@@ -1,4 +1,5 @@
-﻿using Domain.RepositoryInterfaces;
+﻿using Domain.Exceptions;
+using Domain.RepositoryInterfaces;
 using Models;
 using System.ComponentModel.DataAnnotations;
 
@@ -36,9 +37,9 @@ namespace Domain.Services
             Account? existedAccount = await _accountRepo.FindByEmail(email, cancellationToken);
             if (existedAccount != null)
             {
-                throw new InvalidOperationException ("Provided emailis already registered by another user");
+                throw new EmailAlreadyExistsException($"Предоставленный email {email}, уже зарегистрированные другим пользователем"); ; ; ;
             }
-
+           
             var newAccount = new Account()
             {
                 Name = name,

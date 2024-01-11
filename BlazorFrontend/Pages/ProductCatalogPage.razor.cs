@@ -1,7 +1,7 @@
-﻿using BlazorWASM.Model;
+﻿using FrontendBlazor.Model;
 using Models;
 
-namespace BlazorWASM.Pages
+namespace FrontendBlazor.Pages
 {
     public partial class ProductCatalogPage
     {

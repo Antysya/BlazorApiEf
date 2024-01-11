@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31717.71
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWASM", "BlazorFrontend\BlazorWASM.csproj", "{38334341-48F8-4A5B-B5D3-5E4495F38791}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontendBlazor", "BlazorFrontend\FrontendBlazor.csproj", "{38334341-48F8-4A5B-B5D3-5E4495F38791}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "EF\WebAPI.csproj", "{2D292BC0-D739-4A82-816A-6464A4BEE70B}"
 EndProject
@@ -12,7 +12,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopClient", "ShopClient\Sh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneratedApiClientLib", "GeneratedApiClientLib\GeneratedApiClientLib.csproj", "{FE3BC536-D03A-4F37-A4C1-314FB1CF8F6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{520A0649-C8F0-4599-81B2-05A04CF62D9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{520A0649-C8F0-4599-81B2-05A04CF62D9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
