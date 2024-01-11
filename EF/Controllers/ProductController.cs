@@ -1,6 +1,6 @@
 ﻿using Domain.RepositoryInterfaces;
 using Microsoft.AspNetCore.Mvc;
-using Models;
+using Domain.Entites;
 
 namespace ServerDb.Controllers
 {

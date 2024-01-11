@@ -1,5 +1,4 @@
-﻿using FrontendBlazor.Model;
-using Models;
+﻿using Domain.Entites;
 
 namespace FrontendBlazor.Pages
 {

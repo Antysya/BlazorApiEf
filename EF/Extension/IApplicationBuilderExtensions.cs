@@ -1,7 +1,7 @@
 ﻿using ServerDb.Data;
 using System.Runtime.CompilerServices;
 using Microsoft.EntityFrameworkCore;
-using Models;
+using Domain.Entites;
 using Microsoft.AspNetCore.Mvc;
 using Domain.RepositoryInterfaces;
 

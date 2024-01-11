@@ -1,6 +1,6 @@
 ﻿using Domain.RepositoryInterfaces;
 using Microsoft.EntityFrameworkCore;
-using Models;
+using Domain.Entites;
 
 namespace ServerDb.Data.Repositories
 {

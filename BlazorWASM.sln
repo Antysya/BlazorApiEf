@@ -6,7 +6,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontendBlazor", "BlazorFro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "EF\WebAPI.csproj", "{2D292BC0-D739-4A82-816A-6464A4BEE70B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{4ED34CB6-13AC-46D2-B49E-A755AF6A49E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpModels", "Models\HttpModels.csproj", "{4ED34CB6-13AC-46D2-B49E-A755AF6A49E2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopClient", "ShopClient\ShopClient.csproj", "{5888BD9A-4462-4989-90BD-9171CA63FDA3}"
 EndProject

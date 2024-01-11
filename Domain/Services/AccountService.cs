@@ -1,6 +1,6 @@
 ﻿using Domain.Exceptions;
 using Domain.RepositoryInterfaces;
-using Models;
+using Domain.Entites;
 using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Services
@@ -40,7 +40,7 @@ namespace Domain.Services
                 throw new EmailAlreadyExistsException($"Предоставленный email {email}, уже зарегистрированные другим пользователем"); ; ; ;
             }
            
-            var newAccount = new Account()
+            var newAccount = new Account(name, email, password)
             {
                 Name = name,
                 Email = email,

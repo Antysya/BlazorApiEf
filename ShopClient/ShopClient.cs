@@ -1,4 +1,4 @@
-﻿using Models;
+﻿using Domain.Entites;
 using System.Net.Http.Json;
 
 namespace ShopClient

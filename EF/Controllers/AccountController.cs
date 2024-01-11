@@ -1,9 +1,9 @@
 ﻿using Domain.Exceptions;
-using Domain.RepositoryInterfaces;
 using Domain.Services;
 using Microsoft.AspNetCore.Mvc;
-using Models;
+using Domain.Entites;
 using System.ComponentModel.DataAnnotations;
+using HttpModels;
 
 namespace ServerDb.Controllers
 {
@@ -20,14 +20,12 @@ namespace ServerDb.Controllers
 
         [HttpPost ("register")]
         public async Task<ActionResult<Account>> Register(
-            [Required]string name, 
-            [EmailAddress]string email, 
-            [Required] string password, 
+            RegistrationRequest request, 
             CancellationToken cancellationToken)
         {
             try
             {
-                var newAccount = await _accountService.Register(name, email, password, cancellationToken);
+                var newAccount = await _accountService.Register(request.Name, request.Email, request.Password, cancellationToken);
                 return newAccount;
             }
             catch (EmailAlreadyExistsException)

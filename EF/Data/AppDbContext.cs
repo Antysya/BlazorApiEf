@@ -1,4 +1,4 @@
-﻿using Models;
+﻿using Domain.Entites;
 using Microsoft.EntityFrameworkCore;
 
 namespace ServerDb.Data

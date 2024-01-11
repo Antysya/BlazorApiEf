@@ -18,8 +18,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\Domain\Domain.csproj" />
 	  <ProjectReference Include="..\GeneratedApiClientLib\GeneratedApiClientLib.csproj" />
-	  <ProjectReference Include="..\Models\Models.csproj" />
+	  <ProjectReference Include="..\Models\HttpModels.csproj" />
 	</ItemGroup>
 	
 	
