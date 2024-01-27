@@ -1,8 +1,8 @@
-﻿using Domain.RepositoryInterfaces;
+﻿using MyShop.Domain.RepositoryInterfaces;
 using Microsoft.EntityFrameworkCore;
-using Domain.Entites;
+using MyShop.Domain.Entites;
 
-namespace ServerDb.Data.Repositories
+namespace MyShop.WebAPI.Data.Repositories
 {
     public class ProductRepositoryEF : IProductRepository
     {

@@ -1,4 +1,4 @@
-﻿@using GeneratedApiClientLib.Models;
+﻿@*@using GeneratedApiClientLib.Models;
 @page "/Product/{ProductId:int}"
 @inject IProductCatalog ProductCatalog
 
@@ -9,7 +9,7 @@
             <tbody>
                 <tr>
                     <td>Категория:</td>
-@*                    <td>@_product.Category.Name</td>*@
+                    <td>@_product.Category.Name</td>
                 </tr>
                 <tr>
                     <td>Цена:</td>
@@ -23,7 +23,7 @@
         </table>
     </MudCardContent>
 </MudCard>
-@* HTML отображения карточки товара *@
+
 
 @code {
     [Parameter]
@@ -36,3 +36,4 @@
     //    _product = await ProductCatalog.GetProductAsync(ProductId);
     //}
 }
+*@

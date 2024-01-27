@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace MyShop.Domain.Exceptions
 {
-    public class EmailAlreadyExistsException : DomainException
+    public class NotFoundException : DomainException
     {
-        public EmailAlreadyExistsException(string message) : base (message)
-        {
-        }
+        public NotFoundException(string message) : base(message)
+        { }
     }
+       
 }

@@ -1,5 +1,5 @@
-﻿using Domain.Entites;
-namespace Domain.RepositoryInterfaces
+﻿using MyShop.Domain.Entites;
+namespace MyShop.Domain.RepositoryInterfaces
 {
     public interface IAccountRepository
     {

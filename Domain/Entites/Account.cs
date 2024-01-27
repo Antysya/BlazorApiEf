@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Domain.Entites
+namespace MyShop.Domain.Entites
 {
     public class Account : IEntity
     {
-        private string _password;
+        private string _passwordHash;
         private string _email;
         private string _name;
         private static readonly EmailAddressAttribute EmailAddressAttribute = new ();
@@ -16,11 +16,11 @@ namespace Domain.Entites
         { 
         }
 
-        public Account(string name, string email, string password)
+        public Account(string name, string email, string passwordHash)
         {
             Name = name;
             Email = email;
-            Password = password;
+            PasswordHash = passwordHash;
         }
 
         public int Id { get; init; }
@@ -52,15 +52,15 @@ namespace Domain.Entites
                 _email = value;
             }
         }
-        public string Password 
+        public string PasswordHash 
         { 
-            get => _password; 
+            get => _passwordHash;
             set 
             {
                 if(string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException("Пароль не может быть пустым", nameof(value));
 
-                _password = value; 
+                _passwordHash = value; 
             }
         }
     }

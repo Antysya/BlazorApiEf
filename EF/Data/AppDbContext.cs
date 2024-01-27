@@ -1,7 +1,7 @@
-﻿using Domain.Entites;
+﻿using MyShop.Domain.Entites;
 using Microsoft.EntityFrameworkCore;
 
-namespace ServerDb.Data
+namespace MyShop.WebAPI.Data
 {
     public class AppDbContext: DbContext
     {

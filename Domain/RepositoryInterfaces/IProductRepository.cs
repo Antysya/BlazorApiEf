@@ -1,6 +1,6 @@
-﻿using Domain.Entites;
+﻿using MyShop.Domain.Entites;
 
-namespace Domain.RepositoryInterfaces
+namespace MyShop.Domain.RepositoryInterfaces
 {
     public interface IProductRepository
     {

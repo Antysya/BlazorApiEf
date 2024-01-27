@@ -1,4 +1,4 @@
-﻿using Domain.Entites;
+﻿using MyShop.Domain.Entites;
 namespace FrontendBlazor.Model
 {
     public interface IProductCatalog

@@ -1,4 +1,4 @@
-﻿@using MudBlazor
+﻿@*@using MudBlazor
 @using GeneratedApiClientLib.Models;
 @page "/add"
 @inject IProductCatalog ProductCatalog
@@ -20,7 +20,7 @@
         <MudTextField Label="URL изображения товара" @bind-Value="_newProductImageUrl" />
     </MudItem>
     <MudItem>
-        <MudButton Color="Color.Primary" Variant="Variant.Filled" @*OnClick="AddProduct"*@>Добавить товар</MudButton>
+        <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="AddProduct">Добавить товар</MudButton>
     </MudItem>
 </MudForm>
 
@@ -48,4 +48,4 @@
         _newProductImageUrl = string.Empty;
     }
 
-}
+}*@

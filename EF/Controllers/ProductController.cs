@@ -1,8 +1,8 @@
-﻿using Domain.RepositoryInterfaces;
+﻿using MyShop.Domain.RepositoryInterfaces;
 using Microsoft.AspNetCore.Mvc;
-using Domain.Entites;
+using MyShop.Domain.Entites;
 
-namespace ServerDb.Controllers
+namespace MyShop.WebAPI.Controllers
 {
     [Route("api/products")]
    // [ApiController]

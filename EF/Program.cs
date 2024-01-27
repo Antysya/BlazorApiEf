@@ -1,9 +1,12 @@
-using ServerDb.Data;
+using MyShop.WebAPI.Data;
 using Microsoft.EntityFrameworkCore;
-using ServerDb.Extension;
-using ServerDb.Data.Repositories;
-using Domain.RepositoryInterfaces;
-using Domain.Services;
+//using ServerDb.Extension;
+using MyShop.WebAPI.Data.Repositories;
+using MyShop.Domain.RepositoryInterfaces;
+using MyShop.Domain.Services;
+using FrontendBlazor;
+using MyShop.Domain.Services.Interfaces;
+using MyShop.AspNetCorePasswordHasherLib;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +23,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 
 builder.Services.AddScoped<IProductRepository, ProductRepositoryEF>();
+builder.Services.AddSingleton<IAppPasswordHasher, AspNetCorePasswordHasher>();
 builder.Services.AddScoped<IAccountRepository, AccountRepositoryEF>();
 builder.Services.AddScoped<AccountService>();
 
@@ -41,13 +45,11 @@ app.UseCors(policy =>
 });
 
 
-
+app.UseMiddleware<OnlyEdgeMiddleware>();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
-
-app.MapProductEndpoints();
 
 app.Run();
