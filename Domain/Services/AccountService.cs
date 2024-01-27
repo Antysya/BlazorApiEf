@@ -58,7 +58,7 @@ namespace MyShop.Domain.Services
         public async Task<Account> Authenticate(
     string email,
     string password,
-    CancellationToken token)
+    CancellationToken cancellationToken)
         {
             if (string.IsNullOrEmpty(email))
             {
@@ -71,7 +71,7 @@ namespace MyShop.Domain.Services
             }
 
             var existedAccount =
-                await _accountRepo.FindByEmail(email, token);
+                await _accountRepo.FindByEmail(email, cancellationToken);
             if (existedAccount == null)
                 throw new NotFoundException("Учетная запись не найдена");
             var result = _passwordHasher.VerifyHashedPassword(existedAccount.PasswordHash, password);
