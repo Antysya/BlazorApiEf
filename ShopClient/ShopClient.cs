@@ -41,5 +41,15 @@ namespace MyShop.ShopClient
             return account;
         }
 
+        public async Task<List<VisitingPages>> GetVisitingPages(CancellationToken cancellationToken)
+        {
+            var uri = $"{_host}/api/metrics/get";
+            using var response = await _httpClient.GetAsync(uri, cancellationToken);
+            response.EnsureSuccessStatusCode();
+            var visitingPages =
+                await response.Content.ReadFromJsonAsync<List<VisitingPages>>(cancellationToken: cancellationToken);
+            return visitingPages!;
+        }
+
     }
 }

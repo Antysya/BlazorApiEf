@@ -9,6 +9,7 @@ namespace MyShop.WebAPI.Data
         public DbSet<Product> Product => Set<Product>();
         public DbSet<Account> Accounts => Set<Account>();
 
+        public DbSet<VisitingPages> VisitingPages => Set<VisitingPages>();
         public AppDbContext(
             DbContextOptions<AppDbContext> options)
             : base(options)
